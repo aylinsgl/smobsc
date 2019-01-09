@@ -1,6 +1,5 @@
-# Where we are coming from, and where we are
-
-## Story Time: Galton's Pendulum
+Story Time: Galton's Pendulum
+-----------------------------
 
 In the 1880s, scientific progress had opened up a novel option for the
 citizens of Her Majesty Queen Victoria to entertain themselves with:
@@ -12,15 +11,20 @@ one of the first large-sample psychometric databases. Amongst the things
 measured was how long it took the curious museum goer to press a button in
 response to a simple light stimulus.
 
-Galton measured response times using an ingenious design called the ["pendulum
-chronograph"](http://galton.org/essays/1880-1889/galton-1889-rba-reaction-time.pdf).
+Galton measured response times using an ingenious design called the `Pendulum
+chronograph`_.
 Its intricate mechanism -- the position of the pendulum when the key was pushed
 could be compared to a table, giving an estimate of response time --
 had a then-state of the art resolution of 1/100th of a second.
 
-![Some of Galton's tools. The pendulum chronograph is more complicated than any
-of these! Public domain image taken from @johnson1985galton.
-](figures/galtons_instruments.png)
+.. figure:: figures/galtons_instruments.png
+	    :alt: galtons instruments
+
+	    Some of Galton's tools. The pendulum chronograph is more complicated than any of these!
+
+	    Public domain image taken from :cite:`@johnson1985galton`.
+
+.. _Pendulum chronograph: http://galton.org/essays/1880-1889/galton-1889-rba-reaction-time.pdf
 
 Other experimenters around this time were stopping response latencies with
 manual stopwatches.
@@ -58,27 +62,30 @@ and scripts available online allows other researchers to 1. exactly retrace
 what happened in the original experiment, 2. repeat it ad libitum.
 To actually exploit this reproducibility potential, we must use software that is
 open. The biggest open source experimental presentation software is Psychopy
-[@peirce2007psychopy].
+:cite:`peirce2007psychopy`.
 
-## Programming Experiments in Python with Psychopy
+Programming Experiments in Python with Psychopy
+-----------------------------------------------
 
 Psychopy allows us to write simple and readable Python code to control our
 computer's low-level capacity for displaying and playing stimuli. Why is this
 necessary? Because we need to work with the computer on a low level in order to
 get it to achieve highly precise timings, and smoothly display even complex
 visual stimuli. That is one half of the experimental program; the other will 
-consist in translating the [experimental design](experimental_design) into
+consist in translating the `experimental design`_ into
 computer code, so that, e.g., a study participant is presented with the required
-number of trials resulting from your [power calculation](power) for the
-conditions resulting from your [latin square design](experimental_design).
+number of trials resulting from your `power calculation`_ for the
+conditions resulting from your `latin square design`_.
 
 Because Psychopy is written in Python, we having already learned Python,
 learning Psychopy reduces to learning the Psychopy-specific modules.
 
 
-### The basic logic of experiments in Psychopy
+The basic logic of experiments in Psychopy
+::::::::::::::::::::::::::::::::::::::::::
 
-#### Stimuli
+Stimuli
++++++++
 
 Psychopy can display auditory and visual stimuli; visual stimuli may be static,
 or dynamic (moving animations, or videos). To display visual stimuli, Psychopy
@@ -105,34 +112,39 @@ The visual stimuli we can paint on screens live in the `psychopy.visual`
 submodule. This includes various geometric shapes, as well as the `TextStim`
 and `ImageStim` classes, which we will discuss extensively in the following. 
 
-For movie stimuli, see the [MovieStim](http://www.psychopy.org/api/visual/moviestim.html)
+For movie stimuli, see the MovieStim_
 class. Other stimuli include random dot motion and grating stimuli.
 
-#### Keeping track of time and responses
+.. _MovieStim: http://www.psychopy.org/api/visual/moviestim.html
+
+Keeping track of time and responses
++++++++++++++++++++++++++++++++++++
 
 Psychopy allows collecting button or keyboard responses and mouse events.
 
-#### Accuracy and Precision
+Accuracy and Precision
+++++++++++++++++++++++
 
 In principle, Psychopy can be highly accurate. In practice, much depends on
-specifics of the experiment and context [@garaizar2014accuracy; @Plant2016].
+specifics of the experiment and context :cite:`garaizar2014accuracy,Plant2016`.
 Consider: one study has reported that Galton observed slightly *faster*
 response times in Victorian times than are observed in contemporary experiments
-[@woodley2013were]. Could it be that the Victorians were mentally faster than
+:cite:`woodley2013were`. Could it be that the Victorians were mentally faster than
 us? An alternative suggestion for this has been that timings on digital devices
-are only ever approximations; [i.e., many digital devices could not record
-increments shorter than 100 ms!](http://deevybee.blogspot.com/2013/05/have-we-become-slower-and-dumber.html)
+are only ever approximations; i.e., `many digital devices could not record increments shorter than 100 ms`_!
 Even with modern computer technology, the accuracy of stimulus presentation
 timing is never better than the screen refresh rate. For example, many laptop
 monitors have refresh rates of 60 Hz. That is, they can at most show a new
 stimulus 16.5 ms after the previous stimulus, and all stimulus 
 timing intervals will *at best* be multiples of 16.5.
 
+.. _many digital devices could not record increments shorter than 100 ms: http://deevybee.blogspot.com/2013/05/have-we-become-slower-and-dumber.html
+
 Remember the distinction between accuracy and precision: some of the inaccuracy
 of stimulus and response time collection will be random jitter. In many cases,
 this will simply show up as noise in the data (and thus, decrease the power of
 the experiment). Systematic distortions are not a necessary consequence
-[@Vadillo2016]. But other aspects represent an
+:cite:`Vadillo2016`. But other aspects represent an
 inherent bias. For example, for build-in sound cards, auditory stimulus
 presentation onset is preceded by a delay. Typically, this delay will be
 approximately the same on every trial; but it will lead to a systematic
@@ -144,16 +156,30 @@ hardware is required; i.e., light- or sound pressure sensitive detectors.
 (For a cheap solution, the Raspberry Pi mini-computer can easily be
 extended for this purpose.)
 
-## Alternative software
+Alternative software
+--------------------
 
-### OpenSesame
+OpenSesame
+::::::::::
 
-[@mathot2012opensesame]
+:cite:`mathot2012opensesame`
 
-### Going online: surveys on the internet
+Going online: surveys on the internet
+:::::::::::::::::::::::::::::::::::::
 
-#### Online Experiments with the Psychopy Builder
+Online Experiments with the Psychopy Builder
+++++++++++++++++++++++++++++++++++++++++++++
 
-#### JsPsych
+JsPsych
++++++++
 
-#### Mechanical Turk
+Mechanical Turk
++++++++++++++++
+
+References
+----------
+
+.. bibliography:: references.bib
+
+
+

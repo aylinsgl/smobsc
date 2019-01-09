@@ -166,3 +166,8 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
+
+
+## for citations
+extensions = ['sphinxcontrib.bibtex']
+
