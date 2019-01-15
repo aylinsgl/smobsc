@@ -86,16 +86,16 @@ Stimuli
 
 Psychopy can display auditory and visual stimuli; visual stimuli may be static,
 or dynamic (moving animations, or videos). To display visual stimuli, Psychopy
-must know about at least one `Monitor`, and at least one `Window`. Such a
-`Window` is the plane on which drawn stimuli will be shown. Note that `Monitor`
-and `Window` are software objects primarily inside of Psychopy. They
-allow Psychopy to show things in a window on your physical screen
+must know about at least one ``Monitor``, and at least one ``Window``. Such a
+``Window`` is the plane on which drawn stimuli will be shown. Note that
+``Monitor`` and ``Window`` are software objects primarily inside of Psychopy.
+They allow Psychopy to show things in a window on your physical screen
 (or fullscreen).
 
-Internally, Psychopy knows the backside and the front side of each `Window`.
-When a `Window` is newly created, both sides will be empty. We can now
-draw things on the backside (using the `draw` method of various visual
-objects). Once everything we want to show has been drawn, the `Window` is
+Internally, Psychopy knows the backside and the front side of each `Window``.
+When a ``Window`` is newly created, both sides will be empty. We can now
+draw things on the backside (using the ``draw`` method of various visual
+objects). Once everything we want to show has been drawn, the ``Window`` is
 "flipped" so that the painted backside is now shown on the physical screen.
 The new backside is blank. We can now draw other things on this blank backside.
 One option might be to draw nothing, to show a blank screen after the current
@@ -107,9 +107,9 @@ it to show it, paint the new backside, flip again to show and clear, and repeat.
 
 --- put image tbd by aylin here ---
 
-The visual stimuli we can paint on screens live in the `psychopy.visual`
-submodule. This includes various geometric shapes, as well as the `TextStim`
-and `ImageStim` classes, which we will discuss extensively in the following. 
+The visual stimuli we can paint on screens live in the ``psychopy.visual``
+submodule. This includes various geometric shapes, as well as the ``TextStim``
+and ``ImageStim`` classes, which we will discuss extensively in the following. 
 
 For movie stimuli, see the MovieStim_
 class. Other stimuli include random dot motion and grating stimuli.
@@ -120,23 +120,23 @@ Keeping track of time and responses
 +++++++++++++++++++++++++++++++++++
 
 Psychopy allows collecting button or keyboard responses and mouse events.
-For time tracking, one can create and use one or more `clock` objects.
+For time tracking, one can create and use one or more ``clock`` objects.
 To time the duration of an event or interval, the clock is reset before the
 event/at the start of the interval, and then measured at the end.
 For example, to measure a response time to a stimulus, the clock is reset
 exactly when the window flip to show the stimulus happens. Then, the clock
 is checked when the button press happens. No pendulums involved!
 
-Keyboard responses are measured by the `event.waitKeys` and `event.getKeys`
-functions. If provided with a clock, they return a Python `list` of
-`(key, time_since_clock_reset)` `tuple`s.
+Keyboard responses are measured by the ``event.waitKeys`` and ``event.getKeys``
+functions. If provided with a clock, they return a Python ``list`` of
+``tuples``, each ``(key, time_since_clock_reset)``
 
 Storing results and experimental logic
 ++++++++++++++++++++++++++++++++++++++
 
 Psychopy provides expensive functionality for logging results and the logistics
 of presenting stimuli, but it is not even required to learn these; basic Python
-code can be sufficient. For example, the humble `print` option can be employed
+code can be sufficient. For example, the humble ``print`` option can be employed
 to write strings (such as response events) to disc.
 
 A Caveat on Accuracy and Precision
@@ -190,7 +190,7 @@ Alternative software
 A range of alternative software could also have been recommended. In particular,
 OpenSesame is a convenient tool for those who strictly prefer graphical user
 interfaces; Psychopy's graphical user interface "Builder", as well as the
-javascript-based tool `jspsych` allow conducting online experiments.
+javascript-based tool jsPsych allow conducting online experiments.
 
 OpenSesame
 ::::::::::
