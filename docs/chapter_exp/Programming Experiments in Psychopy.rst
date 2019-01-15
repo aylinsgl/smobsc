@@ -207,17 +207,30 @@ reproducible tool.
 Going online: surveys on the internet
 :::::::::::::::::::::::::::::::::::::
 
---- tbd ---
+While we have come quite far since the days of the Pendulum Chronograph,
+typically, to ensure precise measurements, time-sensitive experiments were
+still restricted to dedicated lab computers. Recently, javascript-based
+tools have made it possible to deliver experiments over the internet, and
+conduct them in a web browser.
   
 Online Experiments with the Psychopy Builder
 ++++++++++++++++++++++++++++++++++++++++++++
 
---- tbd ---
+This option is in fact build into Psychopy, but is not available from the Coder
+view requires for Python programming. Instead, it must be accessed from the
+Builder_ interface. See the `Psychopy website`_ for a demonstration of how
+this functionality can be used.
+
+.. _Builder: http://www.psychopy.org/builder/builder.html
+.. _Psychopy website: http://www.psychopy.org/online/fromBuilder.html
 
 JsPsych
 +++++++
 
---- tbd ---
+jsPsych is a javascript library that provides a great package of functions for
+behavioral experiments. See the `jsPsych website`_.
+
+.. _jsPsych website: https://www.jspsych.org/
 
 References
 ----------
