@@ -157,3 +157,17 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+
+## enable markdown
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
+
+
+## for citations
+extensions = ['sphinxcontrib.bibtex']
+
