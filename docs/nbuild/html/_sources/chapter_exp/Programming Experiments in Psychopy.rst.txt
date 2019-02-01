@@ -22,7 +22,7 @@ measured with higher precision.
 
 	    Some of Galton's tools. The pendulum chronograph is more complicated than any of these!
 
-	    Public domain image taken from :cite:`@johnson1985galton`.
+	    Public domain image taken from 'citation missing'.
 
 .. _Pendulum chronograph: http://galton.org/essays/1880-1889/galton-1889-rba-reaction-time.pdf
 
@@ -40,25 +40,25 @@ lack precision. Also, to be frank -- they sound like a lot of work! While some
 might decry a lack of entrepreneurial spirit, most of us will readily admit the
 advantage of computerized methods.
 
-Progress has made the work of the researcher much simpler. (Remember this 
-sentence whenever you feel frustrated attempting to program an experiment! At 
-least you are not Galton, keeping a pendulum chronograph in working condition, 
+Progress has made the work of the researcher much simpler. (Remember this
+sentence whenever you feel frustrated attempting to program an experiment! At
+least you are not Galton, keeping a pendulum chronograph in working condition,
 or walking across London to mentally file people into rather crude and
-subjective boxes.) Today, computers can show various visual input, play all 
-kinds of sounds, and accurately measure ... well, a narrow kind of behavioral 
-responses made by experimental participants. Our computer's graphics and sound 
-cards, and the keyboard and mouse drivers, are relatively arcane. There is as of 
-yet no convenient way to get a computer to show words or pictures on a screen 
-for the purposes of psychological experiments from our favourite programming 
-language, R. There are many commercial, closed-source solutions, which we will 
+subjective boxes.) Today, computers can show various visual input, play all
+kinds of sounds, and accurately measure ... well, a narrow kind of behavioral
+responses made by experimental participants. Our computer's graphics and sound
+cards, and the keyboard and mouse drivers, are relatively arcane. There is as of
+yet no convenient way to get a computer to show words or pictures on a screen
+for the purposes of psychological experiments from our favourite programming
+language, R. There are many commercial, closed-source solutions, which we will
 all ignore in favour of the powerful and open Python options.
 
-Why? Perhaps the most important benefit computerized experiments have is that 
-they are much more reproducible. Using an Open Source program and making 
-experimental stimuli and scripts available online allows other researchers to 1. 
-exactly retrace what happened in the original experiment, 2. repeat it ad 
-libitum. To actually exploit this reproducibility potential, we must use 
-software that is open. The biggest open source experimental presentation 
+Why? Perhaps the most important benefit computerized experiments have is that
+they are much more reproducible. Using an Open Source program and making
+experimental stimuli and scripts available online allows other researchers to 1.
+exactly retrace what happened in the original experiment, 2. repeat it ad
+libitum. To actually exploit this reproducibility potential, we must use
+software that is open. The biggest open source experimental presentation
 software is Psychopy :cite:`peirce2007psychopy`.
 
 Programming Experiments in Python with Psychopy
@@ -68,11 +68,11 @@ Psychopy allows us to write simple and readable Python code to control our
 computer's low-level capacity for displaying and playing stimuli. Why is this
 necessary? Because we need to work with the computer on a low level in order to
 get it to achieve highly precise timings, and smoothly display even complex
-visual stimuli. That is one half of the experimental program; the other will 
-consist in translating the `experimental design`_ into
+visual stimuli. That is one half of the experimental program; the other will
+consist in translating the experimental design into
 computer code, so that, e.g., a study participant is presented with the required
-number of trials resulting from your `power calculation`_ for the
-conditions resulting from your `latin square design`_.
+number of trials resulting from your power calculation for the
+conditions resulting from your latin square design.
 
 Because Psychopy is written in Python, we having already learned Python,
 learning Psychopy reduces to learning the Psychopy-specific modules.
@@ -109,7 +109,7 @@ it to show it, paint the new backside, flip again to show and clear, and repeat.
 
 The visual stimuli we can paint on screens live in the ``psychopy.visual``
 submodule. This includes various geometric shapes, as well as the ``TextStim``
-and ``ImageStim`` classes, which we will discuss extensively in the following. 
+and ``ImageStim`` classes, which we will discuss extensively in the following.
 
 For movie stimuli, see the MovieStim_
 class. Other stimuli include random dot motion and grating stimuli.
@@ -153,7 +153,7 @@ are only ever approximations; i.e.,
 Even with modern computer technology, the accuracy of stimulus presentation
 timing is never better than the screen refresh rate. For example, many laptop
 monitors have refresh rates of 60 Hz. That is, they can at most show a new
-stimulus 16.5 ms after the previous stimulus, and all stimulus 
+stimulus 16.5 ms after the previous stimulus, and all stimulus
 timing intervals will *at best* be multiples of 16.5.
 
 .. _many digital devices could not record increments shorter than 100 ms: http://deevybee.blogspot.com/2013/05/have-we-become-slower-and-dumber.html
@@ -168,7 +168,7 @@ presentation onset is preceded by a delay. Typically, this delay will be
 approximately the same on every trial; but it will lead to a systematic
 underestimation of stimulus onsets.
 
-For experiments requiring extremely precise measurements, it becomes crucial to 
+For experiments requiring extremely precise measurements, it becomes crucial to
 measure, minimize and account for inaccuracy and bias. For this, external
 hardware is required; i.e., light- or sound pressure sensitive detectors.
 (For a cheap solution, the Raspberry Pi mini-computer can easily be
@@ -212,7 +212,7 @@ typically, to ensure precise measurements, time-sensitive experiments were
 still restricted to dedicated lab computers. Recently, javascript-based
 tools have made it possible to deliver experiments over the internet, and
 conduct them in a web browser.
-  
+
 Online Experiments with the Psychopy Builder
 ++++++++++++++++++++++++++++++++++++++++++++
 
