@@ -1,3 +1,6 @@
+Programming Experiments in Psychopy
+###################################
+
 Story Time: Galton's Pendulum
 -----------------------------
 
