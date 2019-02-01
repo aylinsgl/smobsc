@@ -22,7 +22,7 @@ measured with higher precision.
 
 	    Some of Galton's tools. The pendulum chronograph is more complicated than any of these!
 
-	    Public domain image taken from 'citation missing'.
+	    Public domain image taken from :cite:`@johnson1985galton`.
 
 .. _Pendulum chronograph: http://galton.org/essays/1880-1889/galton-1889-rba-reaction-time.pdf
 
@@ -69,10 +69,10 @@ computer's low-level capacity for displaying and playing stimuli. Why is this
 necessary? Because we need to work with the computer on a low level in order to
 get it to achieve highly precise timings, and smoothly display even complex
 visual stimuli. That is one half of the experimental program; the other will
-consist in translating the experimental design into
+consist in translating the `experimental design`_ into
 computer code, so that, e.g., a study participant is presented with the required
-number of trials resulting from your power calculation for the
-conditions resulting from your latin square design.
+number of trials resulting from your `power calculation`_ for the
+conditions resulting from your `latin square design`_.
 
 Because Psychopy is written in Python, we having already learned Python,
 learning Psychopy reduces to learning the Psychopy-specific modules.
