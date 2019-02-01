@@ -11,4 +11,4 @@ Subchapters
    Variables in Psychology
    Contrafactual Causality
    Experimental Designs
-   Programming Experiments in Psychopy
+   Programming Experiments in Python with Psychopy
