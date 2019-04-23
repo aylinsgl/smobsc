@@ -180,16 +180,16 @@
   <div class="section" id="introduction-to-programming-with-python">
 <h1>2.5. Introduction to Programming with Python<a class="headerlink" href="#introduction-to-programming-with-python" title="Permalink to this headline">¶</a></h1>
 <p>This section is meant as a general introduction to Python and is by far not
-complete.The goal of this section is to give a short introduction to Python
+complete. The goal of this section is to give a short introduction to Python
 and help beginners to get familiar with this programming language. We recommend
-to follow this section in parallel with a more interactive tutorial at:</p>
+to follow this section in parallel with a more interactive tutorial by clicking on this button:</p>
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/aylinsgl/Binder_test/master?filepath=01_python_basic.ipynb"><img alt="https://mybinder.org/badge_logo.svg" src="https://mybinder.org/badge_logo.svg" /></a>
 <div class="section" id="what-is-python">
 <h2>2.5.1. What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>Python is a simple and powerful programming language.</dt>
 <dd><ul class="first last simple">
-<li>what it can be used for in a scientific way:</li>
+<li>what it can be used for in a scientific way as well as industry applications (which companies use python etc.)</li>
 </ul>
 </dd>
 </dl>
@@ -209,9 +209,9 @@ statements.</p>
 <p>This means that statements which go together must have the same indentation.
 Each such set of statements is called a block. We will see examples of how
 blocks are important later on. One thing you should remember is that wrong
-indentation rises IndentationError.</p>
+indentation rises <code class="docutils literal notranslate"><span class="pre">IndentationError</span></code>.</p>
 <p><strong>Comments</strong></p>
-<p>Comments are anything behind a # symbol at the beginning of a new line. Python
+<p>Comments are anything behind a <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol at the beginning of a new line. Python
 skips those parts of the program and comments therefor intended to help the
 reader of a program to understand what and why a specific statement in the code
 is doing. Keep in mind that this person can be yourself in 2 month so it is good
@@ -220,7 +220,7 @@ practice to include comments explaining important decisions, details or problems
 <div class="section" id="help-and-descriptions">
 <h2>2.5.3. Help and Descriptions<a class="headerlink" href="#help-and-descriptions" title="Permalink to this headline">¶</a></h2>
 <p>Using the function help we can get a description of almost all functions.
-Imagine we do not know what the math.log()-function is doing or how to use it…
+Imagine we do not know what the <code class="docutils literal notranslate"><span class="pre">math.log()</span></code> function is doing or how to use it…
 we can just call the help function and find out.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
 </pre></div>
@@ -236,14 +236,14 @@ and Class names start with a capital letter. Don’t worry if you do not know wh
 Classes are yet. We will get to that later.</p>
 <p>In addition, there are a number of Python keywords that cannot be used as
 variable names. These keywords are:</p>
-<p>and, as, assert, break, class, continue, def, del, elif, else, except, exec,
-finally, for, from, global, if, import, in, is, lambda, not, or, pass, print,
-raise, return, try, while, with, yield</p>
-<p>Note: Be aware of the keyword lambda, which could easily be a natural variable
+<p><cite>and, as, assert, break, class, continue, def, del, elif, else, except,
+exec, finally, for, from, global, if, import, in, is, lambda, not, or,
+pass, print, raise, return, try, while, with, yield.`</cite></p>
+<p>Note: Be aware of the keyword <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, which could easily be a natural variable
 name in a scientific program. But being a keyword, it cannot be used as a
 variable name.</p>
 <p><strong>Assigning Variables</strong></p>
-<p>The assignment operator in Python is =. Python is a dynamically typed language,
+<p>The assignment operator in Python is <code class="docutils literal notranslate"><span class="pre">=</span></code>. Python is a dynamically typed language,
 so we do not need to specify the type of a variable when we create one.
 Assigning a value to a new variable creates the variable.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># assigning x to 1.0 and y to 3</span>
@@ -256,12 +256,13 @@ Assigning a value to a new variable creates the variable.:</p>
 <h2>2.5.5. Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
 <p>Although not explicitly specified, a variable does have a type associated with
 it. The type is derived form the value it was assigned and defines the operations
-that can be done with a specific variable. Python has five standard data types.</p>
+that can be done with a specific variable.</p>
 <p>You can check the data type with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># check type of x</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Python has four standard data types that we will briefly go over now.</p>
 <p><strong>Numbers</strong></p>
 <p>This data type stores numerical data and python supports different numerical
 data types including:</p>
@@ -281,7 +282,7 @@ double quotation marks.</p>
 <span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;This also is a string&#39;</span>
 </pre></div>
 </div>
-<p>You can specify multi-line strings using triple quotes - (“”” or ‘’‘). You can
+<p>You can specify multi-line strings using triple quotes - (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span></code>). You can
 use single quotes and double quotes freely within the triple quotes.
 An example is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;This is a multi-line string. This is the first line.</span>
@@ -308,7 +309,8 @@ extracts characters between index start and stop. This is called <em>slicing</em
 the beginning and the end of the string, respectively:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This hands us &quot;This&quot;</span>
 <span class="n">s</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
-<span class="c1">#This hands us &quot;is a string&quot;</span>
+
+<span class="c1"># This hands us &quot;is a string&quot;</span>
 <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
 </pre></div>
 </div>
@@ -316,6 +318,7 @@ the beginning and the end of the string, respectively:</p>
 (the default value for step is 1, as we saw above):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># entire string, step size of 1</span>
 <span class="n">s</span><span class="p">[::</span><span class="mi">1</span><span class="p">]</span>
+
 <span class="c1"># entire string, step size of 2. Every second character will be selected</span>
 <span class="n">s</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
@@ -336,7 +339,7 @@ input number into a string, corresponding to a decimal number.</p>
 them can be explored in the interactive part of this introduction.</p>
 <p><strong>Lists</strong></p>
 <p>Lists are very similar to strings, except that each element can be of any type.
-A list entails items separated by commas and enclosed in square brackets [].:</p>
+A list entails items separated by commas and enclosed in square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># list</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
@@ -347,6 +350,7 @@ strings. Elements in a list do not all have to be of the same type and Python
 lists can be inhomogeneous and arbitrarily nested::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># also a list</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+
 <span class="c1"># nested list</span>
 <span class="n">nested_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">]]]]]</span>
 </pre></div>
@@ -366,6 +370,13 @@ use list function to get a list).</p>
 <p><em>Adding, inserting, modifying, and removing elements from lists</em></p>
 <p>We can modify lists by assigning new values to elements in the list. In technical
 jargon, lists are mutable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># assigning &quot;p&quot; to the second element in l</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;p&quot;</span>
+
+<span class="c1"># assigning &quot;s&quot; to the second and &quot;m&quot; to the third element of l</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">,</span><span class="s2">&quot;m&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
 <p><strong>Tupels</strong></p>
 <p>Tupels are very similar to lists. The main difference is that tupels are enclosed
 in parentheses and cannot be updated after they have been assigned.</p>
@@ -373,7 +384,32 @@ in parentheses and cannot be updated after they have been assigned.</p>
 <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>If we try to assign a new value to an element in a tuple we get an error.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">'tuple'</span> <span class="pre">object</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">support</span> <span class="pre">item</span> <span class="pre">assignment</span></code></p>
 <p><strong>Dictionaries</strong></p>
+<p>Dictionaries are also like lists, except that each element is a key-value pair.
+The syntax for dictionaries is <code class="docutils literal notranslate"><span class="pre">{key1</span> <span class="pre">:</span> <span class="pre">value1,</span> <span class="pre">...}</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;parameter1&quot;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="s2">&quot;parameter2&quot;</span> <span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span>
+        <span class="s2">&quot;parameter3&quot;</span> <span class="p">:</span> <span class="mf">3.0</span><span class="p">,}</span>
+</pre></div>
+</div>
+<p>Dictionary entries can only be accessed by their key name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># accessing entry for key &quot;parameter1&quot;</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;parameter1&quot;</span><span class="p">]</span>
+
+<span class="o">&gt;</span> <span class="mf">1.0</span>
+
+<span class="c1"># changing an entry</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;parameter1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+
+<span class="c1"># adding a new entry</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;parameter4&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="operators-and-comparisons">
 <h2>2.5.6. Operators and Comparisons<a class="headerlink" href="#operators-and-comparisons" title="Permalink to this headline">¶</a></h2>
@@ -409,31 +445,31 @@ operators.</p>
 </tbody>
 </table>
 <p><strong>Comparison Operators</strong></p>
-<p>These operators are used to compare their operands. They return either “true” or
-“false” depending if the condition under which the operands are compared applies
+<p>These operators are used to compare their operands. They return either <code class="docutils literal notranslate"><span class="pre">True</span></code> or
+<code class="docutils literal notranslate"><span class="pre">False</span></code> depending if the condition under which the operands are compared applies
 or not.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="12%" />
-<col width="88%" />
+<col width="14%" />
+<col width="86%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>==</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">==</span></code></td>
 <td>evaluates if operands are equal</td>
 </tr>
-<tr class="row-even"><td>!=</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">!=</span></code></td>
 <td>evaluates if operands are not equal</td>
 </tr>
-<tr class="row-odd"><td>&gt;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></td>
 <td>evaluates if left operand is greater than the right operand</td>
 </tr>
-<tr class="row-even"><td>&lt;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></td>
 <td>evaluates if right operand is greater than the left operand</td>
 </tr>
-<tr class="row-odd"><td>&gt;=</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></td>
 <td>evaluates if left operand is greater or equal than the right operand</td>
 </tr>
-<tr class="row-even"><td>&lt;=</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></td>
 <td>evaluates if right operand is greater or equal than the left operand</td>
 </tr>
 </tbody>
@@ -441,23 +477,26 @@ or not.</p>
 </div>
 <div class="section" id="control-flow">
 <h2>2.5.7. Control Flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h2>
-<p>Python usually executed code in an exact top-down order. However, that is not
+<p>Python usually executes code in an exact top-down order. However, that is not
 always what we want. Imagine a situation where different blocks of code should be
 executed depending on different situations, conditions or decision. What if a
 different sound should be played depending on if participant correctly answered
 in a trial?
 Python provides different control flow statements to achieve exactly that.</p>
-<p><strong>if-statement</strong></p>
-<p>The if - statement is used to check if a specific condition is met. If this is
+<p><strong>Conditional statements: if, elif, else</strong></p>
+<p>The Python syntax for conditional execution of code use the keywords <code class="docutils literal notranslate"><span class="pre">if,</span> <span class="pre">elif</span> <span class="pre">(else</span> <span class="pre">if),</span> <span class="pre">else</span></code>:
+The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is used to check if a specific condition is met. If this is
 the case, the block followed the if-statement (if-block) is executed. If not
 this block of code is skipped.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="c1"># check if x equals 1 and print the answer</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes, x equals 1&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="s2">&quot;Yes, x equals 1&quot;</span>
 </pre></div>
 </div>
-<p>The if-statement can be accompanied by an elif- and/or else- statement: In this
+<p>The if-statement can be accompanied by an <code class="docutils literal notranslate"><span class="pre">elif</span></code> and/or <code class="docutils literal notranslate"><span class="pre">else</span></code> statement: In this
 case, python first checks the first if-statement. If this evaluates to “True”
 python executes the following indented code block and skips the rest of the
 if-elif-else statement as one of them already evaluated to true. Otherwise,
@@ -472,51 +511,72 @@ elif-statements evaluates to true.</p>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X is bigger than 5&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X equals 5&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="s2">&quot;X equals 5&quot;</span>
 </pre></div>
 </div>
 <p>For the first time, here we encountered the mentioned indentation. This means
 that we have to be careful to indent our code correctly, or else we will get
 syntax errors.</p>
 <p><strong>for - loop</strong></p>
-<p>The for-loop iterates over the elements of the supplied list, and executes the
-containing block once for each element. Any kind of list can be used in the for
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over the elements of the supplied list (or any other iterable object),
+and executes the containing block once for each element. Any kind of list can be used in the for
 loop. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]:</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+<span class="o">&gt;</span> <span class="mi">1</span>
+  <span class="mi">2</span>
+  <span class="mi">3</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span>
+  <span class="mi">0</span>
+  <span class="mi">1</span>
 </pre></div>
 </div>
 <p>Sometimes it is useful to have access to the indices of the values when
 iterating over a list. We can use the enumerate function for this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)):</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>
+  <span class="mi">1</span> <span class="mi">0</span>
+  <span class="mi">2</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p><strong>while - loop</strong></p>
-<p>The while- loop allows to repeatedly execute a block of code as long as a
+<p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop allows to repeatedly execute a block of code as long as a
 specified condition is met. Python checks the condition and if it evaluates to
-true executes the while-block. It then checks the condition again, if it is
-still true the block is executed again, else python continues to the next
+<code class="docutils literal notranslate"><span class="pre">True</span></code> executes the while-block. It then checks the condition again, if it is
+still <code class="docutils literal notranslate"><span class="pre">True</span></code> the block is executed again, else python continues to the next
 statement in the block.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># while loop will stop as soon as i = 5</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-  <span class="c1"># while loop will stop as soon as i = 5</span>
-  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 
+  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;done&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="mi">0</span>
+  <span class="mi">1</span>
+  <span class="mi">2</span>
+  <span class="mi">3</span>
+  <span class="mi">4</span>
+  <span class="n">done</span>
 </pre></div>
 </div>
 <p><strong>continue, break, pass</strong></p>
-<p>To control the flow of a certain loop you can also use break, continue and pass.
-Break can be used to break out of a loop and force python to stop the execution
-of a loop statement. The continue statement is used to tell Python to skip the
+<p>To control the flow of a certain loop you can also use <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code> and <code class="docutils literal notranslate"><span class="pre">pass</span></code>.
+<code class="docutils literal notranslate"><span class="pre">break</span></code> can be used to break out of a loop and force python to stop the execution
+of a loop statement. The <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement is used to tell Python to skip the
 rest of the statements in the current loop block and to continue to the next
 iteration of the loop (i.e. start executing the loop-block from the beginning).
-Pass basically tells python to do nothing and to carry on with executing the
+<code class="docutils literal notranslate"><span class="pre">pass</span></code> basically tells python to do nothing and to carry on with executing the
 script.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rangelist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
@@ -537,6 +597,12 @@ script.</p>
     <span class="c1"># The &quot;else&quot; clause is optional and is</span>
     <span class="c1"># executed only if the loop didn&#39;t &quot;break&quot;.</span>
     <span class="k">pass</span> <span class="c1"># Do nothing</span>
+
+<span class="o">&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+  <span class="mi">0</span>
+  <span class="mi">1</span>
+  <span class="mi">2</span>
+  <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
@@ -547,19 +613,80 @@ function by their name it is possible to use it anywhere in your program without
 having to repeat the code “hidden” behind the name of the function. There are a
 lot of build-in functions in oython. However, it is also possible to create your
 own functions.
-A function in Python is defined using the keyword def, followed by a function
-name, a signature within parentheses (), and a colon :. The following code, with
+A function in Python is defined using the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code>, followed by a function
+name, a signature within parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>, and a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The following code, with
 one additional level of indentation, is the function body.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
   <span class="c1"># block belonging to the function</span>
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
 
 <span class="n">say_hello</span><span class="p">()</span> <span class="c1"># call the function</span>
+
+<span class="o">&gt;</span> <span class="s1">&#39;hello world&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="classes">
 <h2>2.5.9. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<p>Classes are the key features of object-oriented programming. A class is a structure for
+representing an object and the operations that can be performed on the object.
+In Python a class can contain <cite>attributes</cite> (variables) and <cite>methods</cite> (functions).
+A class is defined almost like a function, but using the class keyword, and the class
+definition usually contains a number of class method definitions (a function in a class).
+Each class method should have an argument <code class="docutils literal notranslate"><span class="pre">self</span></code> as it first argument. This object is a self-reference,
+meaning it is referring to the current instance of the class.</p>
+<p>Some class method names have special meaning, for example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> : The name of the method that is invoked when the object is first created.
+<code class="docutils literal notranslate"><span class="pre">__str__</span></code> : A method that is invoked when a simple string representation of the class is needed,
+as for example when printed. There are many more, see <a class="reference external" href="http://docs.python.org/3.6/reference/datamodel.html#special-method-names">http://docs.python.org/3.6/reference/datamodel.html#special-method-names</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Simple class for representing a point in a Cartesian coordinate system.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+      <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      Create a new Point at x, y.</span>
+<span class="sd">      &quot;&quot;&quot;</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+
+  <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">):</span>
+      <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      Translate the point by dx and dy in the x and y direction.</span>
+<span class="sd">      &quot;&quot;&quot;</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">dy</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span><span class="p">(</span><span class="s2">&quot;Point at [</span><span class="si">%f</span><span class="s2">, </span><span class="si">%f</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+
+  <span class="c1"># creating a new instance of a class</span>
+  <span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># this will invoke the __init__ method in the Point class</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>         <span class="c1"># this will invoke the __str__ method</span>
+
+  <span class="o">&gt;</span> <span class="n">Point</span> <span class="n">at</span> <span class="p">[</span><span class="mf">0.000000</span><span class="p">,</span> <span class="mf">0.000000</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To invoke a class method in the class instance <code class="docutils literal notranslate"><span class="pre">point2</span></code> at coordinates <code class="docutils literal notranslate"><span class="pre">x=1</span></code>, <code class="docutils literal notranslate"><span class="pre">y=1</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">point2</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="n">Point</span> <span class="n">at</span> <span class="p">[</span><span class="mf">1.000000</span><span class="p">,</span> <span class="mf">1.000000</span><span class="p">]</span>
+
+<span class="n">point2</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">point2</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="n">Point</span> <span class="n">at</span> <span class="p">[</span><span class="mf">3.000000</span><span class="p">,</span> <span class="mf">3.000000</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Accessing values of a class object directly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point3</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">point3</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="mi">4</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="modules">
 <h2>2.5.10. Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
